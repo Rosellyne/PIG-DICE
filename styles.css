@@ -3,7 +3,7 @@ body{
     background-image: url("./images/bodyimages.jpeg");
     background-size: cover;
      background-repeat: no-repeat;
-    /* background-size: 25%;  */
+    
 }
 footer{
     text-align: center;
