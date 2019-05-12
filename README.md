@@ -31,8 +31,8 @@ This is a game application that consists of two players where by they play the g
 + The first player to score 100 or more points wins.
 
 
-##Link to deployed site:
+## Link to deployed site:
 Click 
 
 ## License
-Copyright (c) Rosellyne 2019 This project is licensed under the MTI license("")
+Copyright (c) Rosellyne 2019 This project is licensed under the MTI license("https//github.com/Rosellyne/PIG-DICE/blob/master/LICENSE") LICENSE
