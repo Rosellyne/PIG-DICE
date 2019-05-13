@@ -4,14 +4,15 @@ function Player(turn) {
     this.rollScore = 0;
     this.totalScore = 0;
    }
-   function rollDice() {
-    return Math.floor(6 * Math.random()) + 1;
+    function rollDice() {
+    return Math.floor(Math.random() * 6) + 1;
    }
-   Player.prototype.startGame = function() {
-    this.roll = 0;
+   Player.prototype.startGame = function() {    
+ this.roll = 0;
     this.rollScore = 0;
-    this.totalScore = 0;
+    this.totalScore = 0;    
    }
+
    Player.prototype.roll1 = function() {
     if (this.roll === 1) {
       this.rollScore = 0;
@@ -36,32 +37,28 @@ function Player(turn) {
       player1.roll = rollDice();
       $("#value1").text(player1.roll);
       player1.roll1();
-      $("#points1").text(player1.rollScore);
+      $("#round1").text(player1.rollScore);
     });
     $("button#roll3").click(function(){
       player2.roll = rollDice();
       $("#value2").text(player2.roll);
       player2.roll1();
-      $("#points2").text(player2.rollScore);
+      $("#round2").text(player2.rollScore);
     });
     $("button#roll2").click(function(){
     player1.hold();
-    $("#score1").text(player1.rollScore);
-    $("#points1").empty();
+    $(".player1-score").text(player1.totalScore);
+    $("#round1").empty();
     $("#value1").empty();
     player1.winnerCheck();
     });
     $("button#roll4").click(function(){
     player2.hold();
-    $("#score2").text(player2.rollScore);
-    $("#points2").empty();
+    $(".player2-score").text(player2.totalScore);
+    $("#round2").empty();
     $("#value2").empty();
     player2.winnerCheck();
     });
-    // var reset = function() {
-    //   $(".player1Name").val("");
-    //   $(".player2Name").val("");
-    // }
 });
 
 
