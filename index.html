@@ -9,47 +9,63 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <!-- getting the font from goggle fonts  -->
-     <link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/scripts.js"></script>
     <title>Pig Dice</title>
 </head>
-
 <body>
+    <div class="top">
+     <div class="container"> 
+         <div class="input"></div>
+    <h1>WELCOME TO PIG DICE GAME</h1>
+    <h2>Game Rules</h2>
+    Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
+    <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+    <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+    <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
+    </li>
+    <strong>The first player to score 100 or more points wins.</strong>
+    <br>
+    <!-- <div class="input"> -->
+    <a id="start" href="#input details"><button>START THE GAME</button></a>
+</div>
+     <!-- </div>  -->
+</div>
+    <div class="main">
     <div class="container">
         <div class="row">
-            <div class="col-sm-3">
-                <h3><span class="player">Player 1</span> <br><br>Score: <span id="player1-score"></span></h3>
+            <div class="col-sm-6">
+                <h3><span class="player">Player 1</span> <br><br>Totalscore: <span id="player1-score"></span></h3>
+                <h3>Rollscore: <span id="roll2"></span></h3>
+                <h3>Roll: <span id="roll3"></span></h3>
+
+                <div class="" id="cleaner">
+                    <form id="button">
+                        <button class="btn btn-outline-danger btn-lg">Roll</button>
+                        <button class="btn btn-outline-success btn-lg">Hold</button>
+                    </form>
+                </div>
             </div>
 
-             <div class="col-sm-3" id="button">
-                <form id="roll">
-                <button class="btn btn-outline-danger btn-lg" >Roll your dice here</button>
-            </form>
-            <form  id="hold" >
-                <button class="btn btn-outline-success btn-lg">Hold your dice here</button>
-            </form>
-                <br>
-                <button class="btn btn-outline-warning btn-lg" id="reset" href="#input-details">Reset the Game</button>
-            
-            </div>
-            <div class="col-sm-3">
-                <h3><span class="player">Player 2</span> <br><br>Score: <span id="player1-score"></span></h3>
-            </div> 
+            <div class="col-sm-6">
+                <h3><span class="player">Player 2</span> <br><br>Totalscore: <span id="player1-score"></span></h3>
+                <h3>Rollscore: <span id="roll5"></span></h3>
+                <h3>Roll: <span id="roll6"></span></h3>
 
 
-
-
-        </div>
-        <div class="row">
-            <div class="col-xs-3col-xs-offset-2 active text-center">
-                <h3>Turn Total: <span id="roll-total"></span></h3>
-                <h3>Current Roll: <span id="roll"></span></h3>
+                <div class="" id="you">
+                    <form id="task">
+                        <button class="btn btn-outline-danger btn-lg">Roll</button>
+                        <button class="btn btn-outline-success btn-lg">Hold</button>
+                    </form>
+                </div>
             </div>
         </div>
-
     </div>
-
-
-     <footer> COPYRIGHT@Rosellyne 2019</footer>  
-</body> 
+    <footer> COPYRIGHT@Rosellyne 2019</footer>
+     </div>
+</body>
 
 </html>
