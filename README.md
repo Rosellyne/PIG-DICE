@@ -32,7 +32,7 @@ This is a game application that consists of two players where by they play the g
 
 
 ## Link to deployed site:
-Click 
+https://rosellyne.github.io/PIG-DICE/
 
 ## License
 Copyright (c) Rosellyne 2019 This project is licensed under the MTI license https://github.com/Rosellyne/PIG-DICE/blob/master/LICENSE
