@@ -16,7 +16,7 @@ function Player(turn) {
    Player.prototype.roll1 = function() {
     if (this.roll === 1) {
       this.rollScore = 0;
-      alert("Pass the mouse");
+      alert("SORRY you turn is over, pass the mouse to the next player");
     } else {
       this.rollScore += this.roll;
     }
@@ -24,28 +24,31 @@ function Player(turn) {
    Player.prototype.hold = function() {
     this.totalScore += this.rollScore;
     this.rollScore = 0;
-    alert("Pass the mouse");
+    alert("SORRY you turn is over, pass the mouse to the next player");
    }
    Player.prototype.winnerCheck = function() {
     if (this.totalScore >= 100)
-      alert(" You won");
+      alert("  CONGRATES You  are the winner");
     }
     $(document).ready(function(){
         var player1 = new Player("Player 1");
         var player2 = new Player("Player 2")
-    $("button#roll1").click(function(){
+    $("button#roll1").click(function(event){
+        event.preventDefault()
       player1.roll = rollDice();
       $("#value1").text(player1.roll);
       player1.roll1();
       $("#round1").text(player1.rollScore);
     });
-    $("button#roll3").click(function(){
+    $("button#roll3").click(function(event){
+        event.preventDefault()
       player2.roll = rollDice();
       $("#value2").text(player2.roll);
       player2.roll1();
       $("#round2").text(player2.rollScore);
     });
-    $("button#roll2").click(function(){
+    $("button#roll2").click(function(event){
+        event.preventDefault()
     player1.hold();
     $(".player1-score").text(player1.totalScore);
     $("#round1").empty();
